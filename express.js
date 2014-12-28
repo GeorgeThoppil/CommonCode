@@ -6,7 +6,7 @@ var fs = require('fs');
 var app = express();
 
 app.use(express.static(__dirname + '/public'));
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.OPENSHIFT_NODEJS_PORT || 3000);
 app.set('views', './views');
 app.engine('jade', jade.__express);
 //app.engine('html', require('ejs').renderFile);
