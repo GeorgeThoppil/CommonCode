@@ -22,15 +22,20 @@ app.set('view engine', 'jade');
 
 app.get('/Projects',function(req,res)
 		{
-		res.send('Hello from Projects Page');
+	res.render('Projects');
 		});
 
 app.get('/Contact',function(req,res)
 		{
-		res.send('Hello from Contact Page');
+	res.render('Contact');
 		
 		});
 
+app.get('/About',function(req,res)
+		{
+	res.render('About');
+		
+		});
 
 app.get('/',function(req,res)
 		{
@@ -38,6 +43,7 @@ app.get('/',function(req,res)
 		res.render('index');
 		});
 
+
 app.listen(port, ipaddr, function() {
-	 console.log('started');
+	console.log('started');
 		});
